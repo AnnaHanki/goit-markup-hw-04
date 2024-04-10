@@ -181,6 +181,7 @@ address {
   padding-bottom: 188px;
   max-width: 1440px;
 
+  background-color: rgba(46, 47, 66, 0.7);
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
@@ -300,12 +301,43 @@ address {
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
-/* .employee::after {
+/* icons in our team */
+
+.employee {
+}
+
+.social-media-icon {
   content: "";
   width: 40px;
   height: 40px;
+  border-radius: 50%;
   fill: #4d5ae5;
-} */
+  background-color: #4d5ae5;
+
+  background-image: url(../images/icons.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  row-gap: 24px;
+}
+
+.employee::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  fill: #4d5ae5;
+  background-color: #4d5ae5;
+}
+
+.employee::after:hover,
+.employee::after:active {
+  fill: #31d0aa;
+  background-color: #31d0aa;
+}
 
 .team-section-item {
   width: calc((100% - 72px) / 4);
@@ -351,14 +383,8 @@ address {
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
   background: #fff;
-}
 
-/* try  */
-
-.portfolio-list:active::after {
-  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
-    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
-  background: #fff;
+  overlay: ;
 }
 
 .portfolio-text {
