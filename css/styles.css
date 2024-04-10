@@ -295,7 +295,17 @@ address {
   background-color: #fff;
 
   border-radius: 0 0 4px 4px;
+
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
+
+/* .employee::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  fill: #4d5ae5;
+} */
 
 .team-section-item {
   width: calc((100% - 72px) / 4);
@@ -334,6 +344,21 @@ address {
   row-gap: 48px;
 
   column-gap: 24px;
+}
+
+.portfolio-item:hover,
+.portfolio-item:active {
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+  background: #fff;
+}
+
+/* try  */
+
+.portfolio-list:active::after {
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+  background: #fff;
 }
 
 .portfolio-text {
