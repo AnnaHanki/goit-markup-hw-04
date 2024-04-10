@@ -119,7 +119,7 @@ address {
 
 /*menu navigation*/
 
-.header-navigation-item,
+.header-navigation-link,
 .hero-title-button,
 .features-subtitle,
 .team-subtitle,
@@ -137,15 +137,30 @@ address {
   gap: 40px;
 }
 
-.header-navigation-item {
+.header-navigation-link {
   display: block;
   color: #2e2f42;
+  position: relative;
 
   padding: 24px 0;
 }
 
-.header-navigation-item:hover,
-.header-navigation-item:focus {
+.header-navigation-link::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100%;
+
+  border-radius: 2px;
+  height: 4px;
+  background: transparent;
+}
+.header-navigation-link:active::after {
+  background: #404bbf;
+}
+
+.header-navigation-link:hover,
+.header-navigation-link:focus {
   color: #404bbf;
 }
 
@@ -240,6 +255,27 @@ address {
   padding-bottom: 120px;
 }
 
+.features-item {
+  /* position: relative; */
+  width: 264px;
+  width: calc((100% - 3 * 24px) / 4);
+}
+
+.features-icon {
+  /* position: absolute; */
+
+  width: 264px;
+  height: 112px;
+  background: #f4f4fd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
 .team-subtitle,
 .features-subtitle {
   margin-bottom: 8px;
@@ -248,11 +284,6 @@ address {
 .features-list {
   display: flex;
   gap: 24px;
-}
-
-.features-item {
-  width: 264px;
-  width: calc((100% - 3 * 24px) / 4);
 }
 
 .features-text,
